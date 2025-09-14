@@ -1,0 +1,332 @@
+/* ============================================ */
+/*                Full Menu Styles             */
+/* ============================================ */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cs-menu-group-1038 {
+        text-align: center;
+        height: auto;
+        padding: var(--space-2xl) 0;
+        background: var(--cream);
+    }
+
+    #cs-menu-group-1038 .cs-container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin: auto;
+        padding: 0 var(--container-padding);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-2xl);
+        position: relative;
+    }
+
+    #cs-menu-group-1038 .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cs-menu-group-1038 .cs-picture {
+        width: 100%;
+        margin: 0 0 var(--space-md);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+    }
+
+    #cs-menu-group-1038 .cs-picture:before {
+        content: "";
+        width: 50%;
+        max-width: 9.375rem;
+        height: 1px;
+        background: var(--primary);
+        opacity: 0.3;
+        position: relative;
+        display: block;
+    }
+
+    #cs-menu-group-1038 .cs-picture:after {
+        content: "";
+        width: 50%;
+        max-width: 9.375rem;
+        height: 1px;
+        background: var(--primary);
+        opacity: 0.3;
+        position: relative;
+        display: block;
+    }
+
+    #cs-menu-group-1038 .cs-icon {
+        font-size: 2rem;
+        color: var(--primary);
+        flex: none;
+    }
+
+    #cs-menu-group-1038 .cs-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+        color: var(--text-primary);
+        margin: 0 0 var(--space-xl);
+        position: relative;
+    }
+
+    #cs-menu-group-1038 .cs-hidden {
+        display: none;
+    }
+
+    #cs-menu-group-1038 .cs-button-group {
+        width: auto;
+        max-width: 62.5rem;
+        margin: 0 1rem;
+        padding: var(--space-md) var(--space-lg);
+        border-radius: 50px;
+        background: var(--surface);
+        border: 2px solid var(--primary);
+        box-shadow: 0 8px 25px rgba(212, 165, 116, 0.15);
+        display: inline-flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: var(--space-lg);
+        row-gap: var(--space-sm);
+    }
+
+    #cs-menu-group-1038 .cs-button {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 500;
+        margin: 0;
+        padding: var(--space-xs) var(--space-sm);
+        color: var(--text-secondary);
+        background: transparent;
+        border: none;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    #cs-menu-group-1038 .cs-button:hover {
+        color: var(--primary);
+        background: rgba(212, 165, 116, 0.1);
+    }
+
+    #cs-menu-group-1038 .cs-button.cs-active {
+        color: var(--accent);
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+    }
+
+    #cs-menu-group-1038 .cs-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-xl);
+    }
+
+    #cs-menu-group-1038 .cs-menu-list {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--space-xl);
+        position: relative;
+    }
+
+    #cs-menu-group-1038 .cs-menu-row {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: var(--space-lg);
+    }
+
+    #cs-menu-group-1038 .cs-menu-item {
+        text-align: left;
+        list-style: none;
+        margin: 0;
+        width: 100%;
+        padding: var(--space-lg);
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(212, 165, 116, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+        transition: var(--transition);
+    }
+
+    #cs-menu-group-1038 .cs-menu-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #cs-menu-group-1038 .cs-h3 {
+        font-size: clamp(1.125rem, 2vw, 1.375rem);
+        line-height: 1.2;
+        font-weight: 600;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+        position: relative;
+    }
+
+    #cs-menu-group-1038 .cs-h3:after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        opacity: 0.3;
+        position: relative;
+        display: block;
+        order: 1;
+    }
+
+    #cs-menu-group-1038 .cs-name {
+        font-family: var(--font-heading);
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.2;
+        max-width: 20ch;
+        display: block;
+        flex: none;
+        color: var(--text-primary);
+    }
+
+    #cs-menu-group-1038 .cs-price {
+        font-size: clamp(1.125rem, 2vw, 1.25rem);
+        line-height: 1.2;
+        font-weight: 600;
+        width: auto;
+        margin: 0;
+        padding: var(--space-xs) var(--space-sm);
+        border-radius: 25px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: white;
+        box-sizing: border-box;
+        display: block;
+        flex: none;
+        order: 3;
+        box-shadow: 0 2px 8px rgba(212, 165, 116, 0.3);
+    }
+
+    #cs-menu-group-1038 .cs-menu-p {
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.6;
+        width: 100%;
+        margin: 0;
+        color: var(--text-secondary);
+    }
+
+    #cs-menu-group-1038 .cs-button-solid {
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        margin-top: var(--space-lg);
+        padding: 18px 36px;
+        border-radius: 30px;
+        display: inline-block;
+        position: relative;
+        transition: var(--transition);
+        box-shadow: 0 6px 20px rgba(212, 165, 116, 0.3);
+        letter-spacing: 0.5px;
+    }
+
+    #cs-menu-group-1038 .cs-button-solid:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
+    }
+
+    /* Plank Item Pricing Styles */
+    #cs-menu-group-1038 .cs-plank-item .cs-h3:after {
+        display: none;
+    }
+
+    #cs-menu-group-1038 .cs-price-row {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-end;
+    }
+
+    #cs-menu-group-1038 .cs-price-row .cs-price {
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        padding: var(--space-xs) var(--space-sm);
+        margin: 0;
+        border: 1px solid var(--primary);
+        border-radius: 20px;
+        background: rgba(212, 165, 116, 0.1);
+        color: var(--text-primary);
+        box-shadow: 0 2px 4px rgba(212, 165, 116, 0.2);
+        min-width: 100px;
+        text-align: center;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cs-menu-group-1038 .cs-menu-row {
+        width: 100%;
+        flex-direction: row;
+        justify-content: stretch;
+        gap: var(--space-lg);
+    }
+
+    #cs-menu-group-1038 .cs-menu-row.cs-3 .cs-h3 {
+        gap: var(--space-sm);
+    }
+
+    #cs-menu-group-1038 .cs-menu-row.cs-3 .cs-h3:after {
+        display: none;
+    }
+
+    #cs-menu-group-1038 .cs-menu-row.cs-3 .cs-name {
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        width: 70%;
+        max-width: 20ch;
+    }
+
+    #cs-menu-group-1038 .cs-menu-item {
+        max-width: 37.5rem;
+        margin: 0 auto;
+    }
+
+    #cs-menu-group-1038 .cs-name {
+        width: fit-content;
+        max-width: 70%;
+    }
+
+    /* Plank Item Pricing - Tablet/Desktop */
+    #cs-menu-group-1038 .cs-price-row {
+        flex-direction: row;
+        gap: var(--space-sm);
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    #cs-menu-group-1038 .cs-price-row .cs-price {
+        min-width: 90px;
+        font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+    }
+}
