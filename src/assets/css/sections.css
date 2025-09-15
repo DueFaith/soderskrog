@@ -222,13 +222,13 @@
     font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 600;
-    color: var(--brownDark);
+    color: var(--bodyTextColorWhite);
     margin-bottom: var(--space-xs);
 }
 
 .stat-label {
     font-size: 0.875rem;
-    color: var(--brownDark);
+    color: var(--bodyTextColorWhite);
     font-weight: 500;
 }
 
@@ -394,6 +394,13 @@
     padding: var(--space-2xl) 0 !important;
     background: var(--brownDarkest) !important;
     color: var(--bodyTextColorWhite) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    #contact {
+        background: var(--cream) !important;
+        color: var(--headerColor) !important;
+    }
 }
 
 .contact-grid {

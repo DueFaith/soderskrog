@@ -95,6 +95,96 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
+
+    /* Dark Mode Color Overrides */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            /* Dark Mode Palette */
+            --primary: #e08b73; /* Lighter terracotta for better contrast */
+            --primaryLight: #f0a085; /* Even lighter terracotta */
+            --secondary: #C4A484; /* Lighter brown for accessibility */
+            --secondaryLight: #D4B494; /* Lightest brown */
+            --accent: #5A6C6D; /* Lighter blue-grey */
+            --cream: #2A2522; /* Dark brown for backgrounds */
+            --paper: #1a1816; /* Very dark background */
+
+            /* Dark Mode Brown Hierarchy */
+            --brownDarkest: #f5f4f2; /* Light for text on dark */
+            --brownDark: #e8e6e3; /* Lighter for secondary text */
+            --brownMedium: #d4b494; /* Medium for accents */
+            --brownMediumDark: #a4896b; /* Darker brown for cards */
+            --brownLight: #3a332d; /* Dark for subtle backgrounds */
+
+            /* Dark Mode Semantic Colors */
+            --headerColor: var(--brownDarkest); /* Light text on dark */
+            --bodyTextColor: var(--brownDark); /* Light body text */
+            --bodyTextColorWhite: #fafbfc; /* Keep white for contrast */
+            --text-primary: var(--brownDarkest);
+            --text-secondary: var(--brownMedium);
+            --text-light: var(--brownLight);
+
+            /* Dark Mode Alpha Variations */
+            --primaryAlpha10: rgba(224, 139, 115, 0.1);
+            --primaryAlpha15: rgba(224, 139, 115, 0.15);
+            --primaryAlpha30: rgba(224, 139, 115, 0.3);
+            --primaryAlpha40: rgba(224, 139, 115, 0.4);
+
+            --secondaryAlpha08: rgba(196, 164, 132, 0.08);
+            --secondaryAlpha25: rgba(196, 164, 132, 0.25);
+            --secondaryAlpha60: rgba(196, 164, 132, 0.6);
+
+            --brownDarkAlpha08: rgba(245, 244, 242, 0.08);
+            --brownDarkAlpha60: rgba(245, 244, 242, 0.6);
+
+            --accentAlpha10: rgba(42, 37, 34, 0.1);
+            --accentAlpha15: rgba(42, 37, 34, 0.15);
+            --accentAlpha30: rgba(42, 37, 34, 0.3);
+        }
+    }
+
+    /* Manual Dark Mode Toggle */
+    [data-theme="dark"] {
+        /* Dark Mode Palette */
+        --primary: #e08b73; /* Lighter terracotta for better contrast */
+        --primaryLight: #f0a085; /* Even lighter terracotta */
+        --secondary: #C4A484; /* Lighter brown for accessibility */
+        --secondaryLight: #D4B494; /* Lightest brown */
+        --accent: #5A6C6D; /* Lighter blue-grey */
+        --cream: #2A2522; /* Dark brown for backgrounds */
+        --paper: #1a1816; /* Very dark background */
+
+        /* Dark Mode Brown Hierarchy */
+        --brownDarkest: #f5f4f2; /* Light for text on dark */
+        --brownDark: #e8e6e3; /* Lighter for secondary text */
+        --brownMedium: #d4b494; /* Medium for accents */
+        --brownMediumDark: #a4896b; /* Darker brown for cards */
+        --brownLight: #3a332d; /* Dark for subtle backgrounds */
+
+        /* Dark Mode Semantic Colors */
+        --headerColor: var(--brownDarkest); /* Light text on dark */
+        --bodyTextColor: var(--brownDark); /* Light body text */
+        --bodyTextColorWhite: #fafbfc; /* Keep white for contrast */
+        --text-primary: var(--brownDarkest);
+        --text-secondary: var(--brownMedium);
+        --text-light: var(--brownLight);
+
+        /* Dark Mode Alpha Variations */
+        --primaryAlpha10: rgba(224, 139, 115, 0.1);
+        --primaryAlpha15: rgba(224, 139, 115, 0.15);
+        --primaryAlpha30: rgba(224, 139, 115, 0.3);
+        --primaryAlpha40: rgba(224, 139, 115, 0.4);
+
+        --secondaryAlpha08: rgba(196, 164, 132, 0.08);
+        --secondaryAlpha25: rgba(196, 164, 132, 0.25);
+        --secondaryAlpha60: rgba(196, 164, 132, 0.6);
+
+        --brownDarkAlpha08: rgba(245, 244, 242, 0.08);
+        --brownDarkAlpha60: rgba(245, 244, 242, 0.6);
+
+        --accentAlpha10: rgba(42, 37, 34, 0.1);
+        --accentAlpha15: rgba(42, 37, 34, 0.15);
+        --accentAlpha30: rgba(42, 37, 34, 0.3);
+    }
 }
 
     body {

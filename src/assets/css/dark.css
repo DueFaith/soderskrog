@@ -9,8 +9,9 @@
         --accent: var(--primary);
         --bodyTextColorWhite: #fafbfc;
     }
-    body.dark-mode {
-        background-color: var(--dark);
+    body.dark-mode,
+    [data-theme="dark"] body {
+        background-color: var(--paper);
     }
     body.dark-mode p,
     body.dark-mode li,
@@ -22,18 +23,342 @@
     body.dark-mode h6,
     body.dark-mode .cs-title,
     body.dark-mode .cs-text,
-    body.dark-mode .cs-li {
-        color: var(--bodyTextColorWhite);
+    body.dark-mode .cs-li,
+    [data-theme="dark"] p,
+    [data-theme="dark"] li,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] .cs-title,
+    [data-theme="dark"] .cs-text,
+    [data-theme="dark"] .cs-li {
+        color: var(--headerColor);
     }
-    body.dark-mode .light {
+    body.dark-mode .light,
+    [data-theme="dark"] .light {
         display: none;
     }
-    body.dark-mode .dark {
+    body.dark-mode .dark,
+    [data-theme="dark"] .dark {
         display: block !important;
     }
     .dark {
         /* class used to hide elements that only need to be seen when dark mode is enabled */
         display: none;
+    }
+
+    /* Experience Section Dark Mode Fixes */
+    body.dark-mode #experience,
+    [data-theme="dark"] #experience {
+        background: var(--paper) !important;
+    }
+
+    body.dark-mode .experience-item,
+    [data-theme="dark"] .experience-item {
+        background: var(--paper) !important;
+        border: 2px solid var(--brownMedium) !important;
+        border-radius: var(--radius-lg) !important;
+        box-shadow: 0 6px 25px var(--brownDarkAlpha08) !important;
+        transition: var(--transition) !important;
+    }
+
+    body.dark-mode .experience-item:hover,
+    [data-theme="dark"] .experience-item:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: var(--shadow-lg) !important;
+    }
+
+    body.dark-mode .experience-item h3,
+    [data-theme="dark"] .experience-item h3 {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .experience-item p,
+    [data-theme="dark"] .experience-item p {
+        color: var(--whiteAlpha85) !important;
+    }
+
+    body.dark-mode .experience-content .section-label,
+    [data-theme="dark"] .experience-content .section-label {
+        background: var(--primary) !important;
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .experience-content .section-title,
+    [data-theme="dark"] .experience-content .section-title {
+        color: var(--headerColor) !important;
+    }
+
+    /* Menu Cards Dark Mode Fixes */
+    body.dark-mode .menu-card,
+    [data-theme="dark"] .menu-card {
+        background: var(--paper) !important;
+        border-color: var(--brownMedium) !important;
+    }
+
+    body.dark-mode .menu-card h3,
+    [data-theme="dark"] .menu-card h3 {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .menu-card p,
+    [data-theme="dark"] .menu-card p {
+        color: var(--whiteAlpha85) !important;
+    }
+
+    /* Contact Section Dark Mode Fixes */
+    body.dark-mode #contact,
+    [data-theme="dark"] #contact {
+        background: var(--paper) !important;
+    }
+
+    body.dark-mode .contact-info,
+    body.dark-mode .contact-card,
+    [data-theme="dark"] .contact-info,
+    [data-theme="dark"] .contact-card {
+        background: var(--paper) !important;
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .contact-info h3,
+    body.dark-mode .contact-card h3,
+    [data-theme="dark"] .contact-info h3,
+    [data-theme="dark"] .contact-card h3 {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .contact-info p,
+    body.dark-mode .contact-card p,
+    [data-theme="dark"] .contact-info p,
+    [data-theme="dark"] .contact-card p {
+        color: var(--whiteAlpha85) !important;
+    }
+
+    /* About Section Dark Mode Fixes */
+    body.dark-mode .about-content,
+    body.dark-mode .about-card,
+    [data-theme="dark"] .about-content,
+    [data-theme="dark"] .about-card {
+        background: var(--paper) !important;
+    }
+
+    body.dark-mode .about-content h3,
+    body.dark-mode .about-card h3,
+    [data-theme="dark"] .about-content h3,
+    [data-theme="dark"] .about-card h3 {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .about-content p,
+    body.dark-mode .about-card p,
+    [data-theme="dark"] .about-content p,
+    [data-theme="dark"] .about-card p {
+        color: var(--whiteAlpha85) !important;
+    }
+
+    /* General section styling fixes for dark mode */
+    body.dark-mode .section-label,
+    [data-theme="dark"] .section-label {
+        background: var(--primary) !important;
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .section-title,
+    [data-theme="dark"] .section-title {
+        color: var(--headerColor) !important;
+    }
+
+    body.dark-mode .section-description,
+    [data-theme="dark"] .section-description {
+        color: var(--brownMedium) !important;
+    }
+
+    /* About section background fixes */
+    body.dark-mode #about,
+    [data-theme="dark"] #about {
+        background: var(--paper) !important;
+    }
+
+    body.dark-mode .stat,
+    [data-theme="dark"] .stat {
+        background: var(--cream) !important;
+        border: 1px solid var(--primary) !important;
+    }
+
+    body.dark-mode .stat-number,
+    body.dark-mode .stat-label,
+    [data-theme="dark"] .stat-number,
+    [data-theme="dark"] .stat-label {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    /* Menu section fixes */
+    body.dark-mode #menu,
+    [data-theme="dark"] #menu {
+        background: var(--paper) !important;
+    }
+
+    /* General white background elements in dark mode */
+    body.dark-mode [style*="background: white"],
+    body.dark-mode [style*="background-color: white"],
+    body.dark-mode [style*="background: #fff"],
+    body.dark-mode [style*="background-color: #fff"],
+    [data-theme="dark"] [style*="background: white"],
+    [data-theme="dark"] [style*="background-color: white"],
+    [data-theme="dark"] [style*="background: #fff"],
+    [data-theme="dark"] [style*="background-color: #fff"] {
+        background: var(--paper) !important;
+        color: var(--bodyTextColorWhite) !important;
+    }
+    /* Navigation Bar Dark Mode Fixes */
+    body.dark-mode #modern-nav,
+    [data-theme="dark"] #modern-nav {
+        background: var(--brownDarkAlpha60) !important;
+        backdrop-filter: blur(25px) !important;
+        border-bottom: 1px solid var(--whiteAlpha10) !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        #modern-nav {
+            background: var(--brownDarkAlpha60) !important;
+            backdrop-filter: blur(25px) !important;
+            border-bottom: 1px solid var(--whiteAlpha10) !important;
+        }
+
+        .nav-logo .logo-text {
+            color: var(--bodyTextColorWhite) !important;
+        }
+
+        .nav-link {
+            color: var(--whiteAlpha85) !important;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--bodyTextColorWhite) !important;
+        }
+
+        .nav-cta {
+            background: var(--primary) !important;
+            color: var(--bodyTextColorWhite) !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primaryLight) !important;
+        }
+
+        #dark-mode-toggle {
+            background: var(--whiteAlpha10) !important;
+            border: 1px solid var(--whiteAlpha15) !important;
+        }
+
+        #dark-mode-toggle:hover {
+            background: var(--whiteAlpha15) !important;
+            border: 1px solid var(--whiteAlpha30) !important;
+            transform: scale(1.05);
+        }
+
+        #dark-mode-toggle .cs-moon,
+        #dark-mode-toggle .cs-sun {
+            fill: var(--bodyTextColorWhite) !important;
+        }
+
+        .mobile-menu-overlay {
+            background: var(--brownDarkAlpha60) !important;
+        }
+
+        .mobile-menu {
+            background: var(--brownMediumDark) !important;
+        }
+
+        .mobile-nav-link,
+        .mobile-nav-cta {
+            color: var(--bodyTextColorWhite) !important;
+        }
+
+        .mobile-toggle .hamburger-line {
+            background: var(--bodyTextColorWhite) !important;
+        }
+
+        /* Experience Section Dark Mode Fixes */
+        #experience {
+            background: var(--paper) !important;
+        }
+
+        .experience-item {
+            background: var(--cream) !important;
+            border: 2px solid var(--brownMedium) !important;
+            border-radius: var(--radius-lg) !important;
+            box-shadow: 0 6px 25px var(--brownDarkAlpha08) !important;
+            transition: var(--transition) !important;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: var(--shadow-lg) !important;
+        }
+
+        .experience-item h3 {
+            color: var(--bodyTextColorWhite) !important;
+        }
+
+        .experience-item p {
+            color: var(--whiteAlpha85) !important;
+        }
+    }
+
+    body.dark-mode .nav-logo .logo-text,
+    [data-theme="dark"] .nav-logo .logo-text {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .nav-link,
+    [data-theme="dark"] .nav-link {
+        color: var(--whiteAlpha85) !important;
+    }
+
+    body.dark-mode .nav-link:hover,
+    body.dark-mode .nav-link.active,
+    [data-theme="dark"] .nav-link:hover,
+    [data-theme="dark"] .nav-link.active {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .nav-cta,
+    [data-theme="dark"] .nav-cta {
+        background: var(--primary) !important;
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .nav-cta:hover,
+    [data-theme="dark"] .nav-cta:hover {
+        background: var(--primaryLight) !important;
+    }
+
+    /* Mobile Menu Dark Mode Fixes */
+    body.dark-mode .mobile-menu-overlay,
+    [data-theme="dark"] .mobile-menu-overlay {
+        background: var(--brownDarkAlpha60) !important;
+    }
+
+    body.dark-mode .mobile-menu,
+    [data-theme="dark"] .mobile-menu {
+        background: var(--brownMediumDark) !important;
+    }
+
+    body.dark-mode .mobile-nav-link,
+    body.dark-mode .mobile-nav-cta,
+    [data-theme="dark"] .mobile-nav-link,
+    [data-theme="dark"] .mobile-nav-cta {
+        color: var(--bodyTextColorWhite) !important;
+    }
+
+    body.dark-mode .mobile-toggle .hamburger-line,
+    [data-theme="dark"] .mobile-toggle .hamburger-line {
+        background: var(--bodyTextColorWhite) !important;
     }
 }
 /*-- -------------------------- -->
@@ -41,11 +366,13 @@
   <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode #dark-mode-toggle .cs-sun {
+    body.dark-mode #dark-mode-toggle .cs-sun,
+    [data-theme="dark"] #dark-mode-toggle .cs-sun {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
-    body.dark-mode #dark-mode-toggle .cs-moon {
+    body.dark-mode #dark-mode-toggle .cs-moon,
+    [data-theme="dark"] #dark-mode-toggle .cs-moon {
         opacity: 0;
         transform: translate(-50%, -150%);
     }
@@ -60,6 +387,21 @@
         position: relative;
         z-index: 1000;
         overflow: hidden;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    body.dark-mode #dark-mode-toggle,
+    [data-theme="dark"] #dark-mode-toggle {
+        background: var(--whiteAlpha10) !important;
+        border: 1px solid var(--whiteAlpha15) !important;
+    }
+
+    body.dark-mode #dark-mode-toggle:hover,
+    [data-theme="dark"] #dark-mode-toggle:hover {
+        background: var(--whiteAlpha15) !important;
+        border: 1px solid var(--whiteAlpha30) !important;
+        transform: scale(1.05);
     }
     #dark-mode-toggle img,
     #dark-mode-toggle svg {
@@ -76,11 +418,22 @@
         transition: transform 0.3s, opacity 0.3s;
         fill: var(--headerColor);
     }
+
+    body.dark-mode #dark-mode-toggle .cs-moon,
+    [data-theme="dark"] #dark-mode-toggle .cs-moon {
+        fill: var(--bodyTextColorWhite) !important;
+    }
+
     #dark-mode-toggle .cs-sun {
         opacity: 0;
         z-index: 1;
         transform: translate(-50%, 100%);
         transition: transform 0.3s, opacity 0.3s;
+    }
+
+    body.dark-mode #dark-mode-toggle .cs-sun,
+    [data-theme="dark"] #dark-mode-toggle .cs-sun {
+        fill: var(--bodyTextColorWhite) !important;
     }
 }
 /* Tablet - 768px */
