@@ -222,12 +222,12 @@
         padding: var(--space-xs) var(--space-sm);
         border-radius: 25px;
         background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-        color: var(--bodyTextColorWhite);
+        color: var(--bodyTextColorWhite) !important;
         box-sizing: border-box;
         display: block;
         flex: none;
         order: 3;
-        box-shadow: 0 4px 12px var(--brownDarkAlpha60), 0 2px 4px var(--blackAlpha20);
+        border: 2px solid var(--primary) !important;
     }
 
     #cs-menu-group-1038 .cs-menu-p {
@@ -276,11 +276,10 @@
         font-size: clamp(0.875rem, 1.5vw, 1rem);
         padding: var(--space-xs) var(--space-sm);
         margin: 0;
-        border: 1px solid var(--primary);
+        border: 2px solid var(--primary);
         border-radius: 20px;
-        background: var(--legacyMenuAlpha10);
-        color: var(--text-primary);
-        box-shadow: 0 2px 4px var(--legacyMenuAlpha20);
+        background: transparent;
+        color: var(--bodyTextColorWhite) !important;
         min-width: 100px;
         text-align: center;
     }
