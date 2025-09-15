@@ -279,13 +279,13 @@
 }
 
 .menu-card {
-    background: var(--surface);
+    background: var(--brownMediumDark) !important;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 6px 25px var(--blackAlpha08);
+    box-shadow: 0 6px 25px var(--brownDarkAlpha08);
     transition: var(--transition);
     animation: fadeInUp 0.8s ease-out;
-    border: 1px solid var(--legacyMenuAlpha10);
+    border: 2px solid var(--brownMedium) !important;
 }
 
 .menu-card:nth-child(2) {
@@ -325,12 +325,12 @@
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--brownDarkest);
     margin-bottom: var(--space-sm);
 }
 
 .menu-card-content p {
-    color: var(--text-secondary);
+    color: var(--brownDark);
     margin-bottom: var(--space-md);
     line-height: 1.6;
 }

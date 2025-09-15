@@ -540,13 +540,13 @@ body {
 }
 
 .menu-card {
-    background: var(--paper);
+    background: var(--brownLight);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 6px 25px var(--blackAlpha08);
     transition: var(--transition);
     animation: fadeInUp 0.8s ease-out;
-    border: 1px solid var(--whiteAlpha15);
+    border: 1px solid var(--brownMedium);
 }
 
 .menu-card:hover {
