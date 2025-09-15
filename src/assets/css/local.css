@@ -34,9 +34,9 @@
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --shadow-sm: 0 1px 3px var(--blackAlpha10);
+    --shadow-md: 0 4px 12px var(--blackAlpha15);
+    --shadow-lg: 0 8px 25px var(--blackAlpha15);
 
     /* Transitions */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -219,10 +219,10 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(253, 253, 252, 0.97);
+    background: var(--whiteAlpha97);
     backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--whiteAlpha03);
+    box-shadow: 0 2px 20px var(--blackAlpha05);
     transition: var(--transition);
 }
 
@@ -282,7 +282,7 @@ body {
 
 .nav-cta {
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 12px 24px;
     border-radius: var(--radius-sm);
     text-decoration: none;
@@ -300,7 +300,7 @@ body {
 /* Button Components */
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primaryLight));
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 18px 36px;
     border-radius: 30px;
     text-decoration: none;
@@ -309,14 +309,14 @@ body {
     align-items: center;
     gap: var(--space-xs);
     transition: var(--transition);
-    box-shadow: 0 6px 20px rgba(210, 112, 90, 0.3);
+    box-shadow: 0 6px 20px var(--primaryAlpha30);
     letter-spacing: 0.5px;
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--primaryLight), var(--primary));
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(210, 112, 90, 0.4);
+    box-shadow: 0 8px 25px var(--primaryAlpha40);
 }
 
 .btn-secondary {
@@ -329,14 +329,14 @@ body {
     font-weight: 500;
     transition: var(--transition);
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(210, 112, 90, 0.15);
+    box-shadow: 0 4px 15px var(--primaryAlpha15);
 }
 
 .btn-secondary:hover {
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(210, 112, 90, 0.3);
+    box-shadow: 0 6px 20px var(--primaryAlpha30);
 }
 
 /* Utility Classes */
@@ -349,7 +349,7 @@ body {
 .section-label {
     display: inline-block;
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -381,7 +381,7 @@ body {
 
 .section-description {
     font-size: 1.125rem;
-    color: var(--bodyTextColor);
+    color: var(--brownMedium);
     margin-bottom: var(--space-xl);
     max-width: 600px;
     margin-left: auto;
@@ -396,7 +396,7 @@ body {
 /* Experience Section */
 #experience {
     padding: var(--space-2xl) 0;
-    background: var(--cream);
+    background: var(--brownLight);
 }
 
 .experience-content {
@@ -435,7 +435,7 @@ body {
 }
 
 .experience-item p {
-    color: var(--bodyTextColor);
+    color: var(--brownMedium);
     line-height: 1.6;
 }
 
@@ -466,7 +466,7 @@ body {
 .hero-badge {
     display: inline-block;
     background: linear-gradient(135deg, var(--primary), var(--primaryLight));
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 10px 20px;
     border-radius: 25px;
     font-size: 0.875rem;
@@ -474,7 +474,7 @@ body {
     margin-bottom: var(--space-md);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(210, 112, 90, 0.3);
+    box-shadow: 0 4px 15px var(--primaryAlpha30);
 }
 
 .hero-title-main {
@@ -497,7 +497,7 @@ body {
 
 .hero-text {
     font-size: 1.125rem;
-    color: var(--bodyTextColor);
+    color: var(--brownMedium);
     margin-bottom: var(--space-xl);
     max-width: 500px;
 }
@@ -533,10 +533,10 @@ body {
     background: var(--paper);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 25px var(--blackAlpha08);
     transition: var(--transition);
     animation: fadeInUp 0.8s ease-out;
-    border: 1px solid rgba(210, 112, 90, 0.1);
+    border: 1px solid var(--primaryAlpha10);
 }
 
 .menu-card:hover {

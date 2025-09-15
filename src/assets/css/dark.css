@@ -4,9 +4,9 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     :root {
-        --dark: #082032;
-        --medium: #2c394b;
-        --accent: #334756;
+        --dark: var(--headerColor);
+        --medium: var(--secondary);
+        --accent: var(--primary);
         --bodyTextColorWhite: #fafbfc;
     }
     body.dark-mode {
@@ -74,7 +74,7 @@
     #dark-mode-toggle .cs-moon {
         z-index: 2;
         transition: transform 0.3s, opacity 0.3s;
-        fill: #1a1a1a;
+        fill: var(--headerColor);
     }
     #dark-mode-toggle .cs-sun {
         opacity: 0;

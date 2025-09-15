@@ -93,7 +93,7 @@
         border-radius: 50px;
         background: var(--surface);
         border: 2px solid var(--primary);
-        box-shadow: 0 8px 25px rgba(212, 165, 116, 0.15);
+        box-shadow: 0 8px 25px var(--legacyMenuAlpha15);
         display: inline-flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -122,14 +122,14 @@
 
     #cs-menu-group-1038 .cs-button:hover {
         color: var(--primary);
-        background: rgba(212, 165, 116, 0.1);
+        background: var(--legacyMenuAlpha10);
     }
 
     #cs-menu-group-1038 .cs-button.cs-active {
         color: var(--accent);
         background: linear-gradient(135deg, var(--primary), var(--primary-dark));
         font-weight: 600;
-        box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+        box-shadow: 0 4px 15px var(--legacyMenuAlpha30);
     }
 
     #cs-menu-group-1038 .cs-menu {
@@ -164,8 +164,8 @@
         padding: var(--space-lg);
         background: var(--surface);
         border-radius: var(--radius-lg);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(212, 165, 116, 0.1);
+        box-shadow: 0 4px 15px var(--blackAlpha05);
+        border: 1px solid var(--legacyMenuAlpha10);
         display: flex;
         flex-direction: column;
         gap: var(--space-sm);
@@ -174,7 +174,7 @@
 
     #cs-menu-group-1038 .cs-menu-item:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 6px 20px var(--blackAlpha10);
     }
 
     #cs-menu-group-1038 .cs-h3 {
@@ -220,12 +220,12 @@
         padding: var(--space-xs) var(--space-sm);
         border-radius: 25px;
         background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-        color: white;
+        color: var(--bodyTextColorWhite);
         box-sizing: border-box;
         display: block;
         flex: none;
         order: 3;
-        box-shadow: 0 2px 8px rgba(212, 165, 116, 0.3);
+        box-shadow: 0 2px 8px var(--legacyMenuAlpha30);
     }
 
     #cs-menu-group-1038 .cs-menu-p {
@@ -238,7 +238,7 @@
 
     #cs-menu-group-1038 .cs-button-solid {
         background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-        color: white;
+        color: var(--bodyTextColorWhite);
         font-size: 1.125rem;
         font-weight: 600;
         text-decoration: none;
@@ -249,13 +249,13 @@
         display: inline-block;
         position: relative;
         transition: var(--transition);
-        box-shadow: 0 6px 20px rgba(212, 165, 116, 0.3);
+        box-shadow: 0 6px 20px var(--legacyMenuAlpha30);
         letter-spacing: 0.5px;
     }
 
     #cs-menu-group-1038 .cs-button-solid:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
+        box-shadow: 0 8px 25px var(--legacyMenuAlpha40);
     }
 
     /* Plank Item Pricing Styles */
@@ -276,9 +276,9 @@
         margin: 0;
         border: 1px solid var(--primary);
         border-radius: 20px;
-        background: rgba(212, 165, 116, 0.1);
+        background: var(--legacyMenuAlpha10);
         color: var(--text-primary);
-        box-shadow: 0 2px 4px rgba(212, 165, 116, 0.2);
+        box-shadow: 0 2px 4px var(--legacyMenuAlpha20);
         min-width: 100px;
         text-align: center;
     }

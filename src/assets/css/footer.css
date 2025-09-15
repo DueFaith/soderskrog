@@ -2,8 +2,8 @@
 /*                Footer Styles                */
 /* ============================================ */
 #main-footer {
-    background: var(--text-primary);
-    color: rgba(255, 255, 255, 0.9);
+    background: var(--accent);
+    color: var(--whiteAlpha90);
     padding: var(--space-2xl) 0 var(--space-md);
     position: relative;
 }
@@ -41,12 +41,12 @@
     font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 600;
-    color: white;
+    color: var(--bodyTextColorWhite);
     margin-bottom: var(--space-sm);
 }
 
 .footer-tagline {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--whiteAlpha90);
     font-size: 1.125rem;
     line-height: 1.6;
     margin-bottom: var(--space-lg);
@@ -63,9 +63,9 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--whiteAlpha15);
     border-radius: 50%;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--whiteAlpha85);
     text-decoration: none;
     transition: var(--transition);
     backdrop-filter: blur(10px);
@@ -73,7 +73,7 @@
 
 .social-link:hover {
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     transform: translateY(-2px);
 }
 
@@ -81,7 +81,7 @@
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 600;
-    color: white;
+    color: var(--bodyTextColorWhite);
     margin-bottom: var(--space-md);
     position: relative;
 }
@@ -107,7 +107,7 @@
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--whiteAlpha85);
     text-decoration: none;
     transition: var(--transition);
     font-size: 0.95rem;
@@ -128,7 +128,7 @@
     display: flex;
     align-items: flex-start;
     gap: var(--space-sm);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--whiteAlpha90);
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -141,7 +141,7 @@
 
 /* Footer Bottom */
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--whiteAlpha10);
     padding-top: var(--space-lg);
     display: flex;
     justify-content: space-between;
@@ -155,7 +155,7 @@
 }
 
 .copyright {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--whiteAlpha75);
     font-size: 0.9rem;
 }
 
@@ -165,7 +165,7 @@
 }
 
 .footer-bottom-links a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--whiteAlpha80);
     text-decoration: none;
     font-size: 0.9rem;
     transition: var(--transition);
@@ -177,7 +177,7 @@
 
 .footer-badge {
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.875rem;

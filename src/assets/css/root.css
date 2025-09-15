@@ -6,18 +6,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Inter:wght@300;400;500;600&display=swap');
 @media only screen and (min-width: 0rem) {
     :root {
-    /* Scandinavian Restaurant Color Palette */
-    --primary: #d2705a; /* Warm terracotta from menu stripes */
+    /* Scandinavian Restaurant Color Palette - Enhanced with Brown Tints */
+    --primary: #d2705a; /* Warm terracotta - keeping original for consistency */
     --primaryLight: #e08b73; /* Lighter terracotta */
-    --secondary: #7b9b7a; /* Sage green from second menu */
-    --secondaryLight: #96b095; /* Light sage green */
-    --accent: #d67b8a; /* Raspberry pink from cocktail */
-    --cream: #f9f6f3; /* Cream background */
+    --secondary: #A27B5C; /* Warm brown - elevated from accent */
+    --secondaryLight: #C4A484; /* Lighter brown */
+    --accent: #3F4E4F; /* Deep blue-grey for sophisticated contrast */
+    --cream: #DCD7C9; /* Light cream brown for backgrounds */
     --paper: #faf8f5; /* Light paper texture */
-    --headerColor: #3a2f2b;       /* Dark chocolate brown for headings */
-    --bodyTextColor: #4b3b35;     /* Warm medium brown for normal text */
+
+    /* Rich Brown Tint Hierarchy */
+    --brownDarkest: #2C3639; /* Deep charcoal brown for strongest contrast */
+    --brownDark: #3F4E4F; /* Medium dark brown for secondary headings */
+    --brownMedium: #A27B5C; /* Warm medium brown for accent text */
+    --brownLight: #DCD7C9; /* Light cream brown for subtle backgrounds */
+
+    /* Semantic Color References */
+    --headerColor: var(--brownDarkest); /* Strongest contrast for headings */
+    --bodyTextColor: var(--brownDark); /* Comfortable reading text */
     --bodyTextColorWhite: #fafbfc; /* For text on dark/colored backgrounds */
-    }
+    --text-primary: var(--brownDarkest); /* Primary text color */
+    --text-secondary: var(--brownMedium); /* Secondary text color */
+    --text-light: var(--brownLight); /* Light text color */
+
+    /* Shadow and Transparency Variables */
+    --shadowColor: var(--brownDarkest);
+    --shadowColorLight: var(--brownMedium);
+    --overlayDark: var(--brownDarkest);
+    --overlayLight: var(--bodyTextColorWhite);
+
+    /* Primary Terracotta Alpha Variations (d2705a) */
+    --primaryAlpha10: rgba(210, 112, 90, 0.1);
+    --primaryAlpha15: rgba(210, 112, 90, 0.15);
+    --primaryAlpha30: rgba(210, 112, 90, 0.3);
+    --primaryAlpha40: rgba(210, 112, 90, 0.4);
+
+    /* Secondary Brown Alpha Variations (A27B5C) */
+    --secondaryAlpha08: rgba(162, 123, 92, 0.08);
+    --secondaryAlpha25: rgba(162, 123, 92, 0.25);
+    --secondaryAlpha60: rgba(162, 123, 92, 0.6);
+
+    /* Brown Darkest Alpha Variations (2C3639) */
+    --brownDarkAlpha08: rgba(44, 54, 57, 0.08);
+    --brownDarkAlpha60: rgba(44, 54, 57, 0.6);
+
+    /* Light Cream Alpha Variations (DCD7C9) */
+    --accentAlpha10: rgba(220, 215, 201, 0.1);
+    --accentAlpha15: rgba(220, 215, 201, 0.15);
+    --accentAlpha30: rgba(220, 215, 201, 0.3);
+
+    /* White Alpha Variations */
+    --whiteAlpha03: rgba(255, 255, 255, 0.03);
+    --whiteAlpha05: rgba(255, 255, 255, 0.05);
+    --whiteAlpha10: rgba(255, 255, 255, 0.1);
+    --whiteAlpha15: rgba(255, 255, 255, 0.15);
+    --whiteAlpha70: rgba(255, 255, 255, 0.7);
+    --whiteAlpha75: rgba(255, 255, 255, 0.75);
+    --whiteAlpha80: rgba(255, 255, 255, 0.8);
+    --whiteAlpha85: rgba(255, 255, 255, 0.85);
+    --whiteAlpha90: rgba(255, 255, 255, 0.9);
+    --whiteAlpha97: rgba(253, 253, 252, 0.97);
+
+    /* Black Alpha Variations */
+    --blackAlpha05: rgba(0, 0, 0, 0.05);
+    --blackAlpha08: rgba(0, 0, 0, 0.08);
+    --blackAlpha10: rgba(0, 0, 0, 0.1);
+    --blackAlpha15: rgba(0, 0, 0, 0.15);
+    --blackAlpha20: rgba(0, 0, 0, 0.2);
+    --blackAlpha50: rgba(0, 0, 0, 0.5);
+
+    /* Legacy Component Colors - Updated to Match New Palette */
+    --greenAlpha15: var(--primaryAlpha15);
+    --greenAlpha30: var(--primaryAlpha30);
+    --greenAlpha40: var(--primaryAlpha40);
+    --legacyMenuAlpha10: var(--primaryAlpha10);
+    --legacyMenuAlpha15: var(--primaryAlpha15);
+    --legacyMenuAlpha20: rgba(162, 123, 92, 0.2);
+    --legacyMenuAlpha30: var(--primaryAlpha30);
+    --legacyMenuAlpha40: var(--primaryAlpha40);
+
+    /* Font Sizes */
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -25,6 +93,7 @@
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    }
 }
 
     body {
@@ -88,7 +157,7 @@
         color: var(--bodyTextColorWhite);
         background-color: var(--secondary);
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(123, 155, 122, 0.25);
+        box-shadow: 0 4px 12px var(--primaryAlpha15);
         display: inline-block;
         position: relative;
         z-index: 1;
@@ -98,7 +167,7 @@
         content: "";
         width: 0%;
         height: 100%;
-        background: #000;
+        background: var(--headerColor);
         opacity: 1;
         position: absolute;
         top: 0;
@@ -109,7 +178,7 @@
     .cs-button-solid:hover {
         background-color: var(--primary);
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(210, 112, 90, 0.3);
+        box-shadow: 0 6px 20px var(--primaryAlpha30);
         color: var(--bodyTextColorWhite);
     }
     .cs-button-solid:hover:before {
@@ -131,7 +200,7 @@
 
     .cs-button-11:hover {
         background-color: var(--primary);
-        color: #fff;
+        color: var(--bodyTextColorWhite);
     }
 
     .cs-button-11 .cs-wrapper {
@@ -182,7 +251,7 @@
         padding: 0.75rem 1rem;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
-        background: rgba(26, 26, 26, 0.08);
+        background: var(--secondaryAlpha08);
         -webkit-backdrop-filter: blur(27px);
         backdrop-filter: blur(27px);
         position: fixed;
@@ -194,7 +263,7 @@
         content: "";
         width: 100%;
         height: 0%;
-        background: #1a1a1a;
+        background: var(--headerColor);
         opacity: 1;
         position: absolute;
         display: block;
@@ -207,7 +276,7 @@
         content: "";
         width: 0%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.6);
+        background: var(--brownDarkAlpha60);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         position: absolute;
@@ -221,7 +290,7 @@
             opacity 0.5s;
     }
     #cs-navigation.cs-active {
-        background-color: #1a1a1a;
+        background-color: var(--headerColor);
     }
     #cs-navigation.cs-active:before {
         height: 100%;
@@ -306,7 +375,7 @@
         width: 100%;
         height: 2px;
         border-radius: 2px;
-        background-color: #fafbfc;
+        background-color: var(--bodyTextColorWhite);
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -345,8 +414,8 @@
         min-width: 60vw;
         height: 100vh;
         opacity: 0;
-        background-color: #fff;
-        box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
+        background-color: var(--bodyTextColorWhite);
+        box-shadow: inset var(--blackAlpha20) 0px 8px 24px;
         overflow: hidden;
         position: absolute;
         top: 100%;
@@ -509,7 +578,7 @@
     width: 50%;
     max-width: 9.375rem;
     height: 1px;
-    background: #b4b2c7;
+    background: var(--secondary);
     opacity: 1;
     position: relative;
     display: block;
@@ -520,7 +589,7 @@
     width: 50%;
     max-width: 9.375rem;
     height: 1px;
-    background: #b4b2c7;
+    background: var(--secondary);
     opacity: 1;
     position: relative;
     display: block;
@@ -570,7 +639,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: #000;
+    background: var(--headerColor);
     opacity: 0.72;
     position: absolute;
     display: block;
@@ -642,7 +711,7 @@
     border-radius: 12px;
     background-color: var(--cream);
     border: 2px solid var(--primary);
-    box-shadow: 0 8px 24px rgba(210, 112, 90, 0.15);
+    box-shadow: 0 8px 24px var(--primaryAlpha15);
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -721,7 +790,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: #000;
+    background: var(--headerColor);
     opacity: 0.7;
     position: absolute;
     display: block;
@@ -737,11 +806,11 @@
     color: var(--bodyTextColorWhite);
   }
   #cs-menu-group-1018 .cs-menu.cs-menu-style2 .cs-menu-p {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     opacity: 0.8;
   }
   #cs-menu-group-1018 .cs-menu.cs-menu-style3 {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--whiteAlpha70);
   }
   #cs-menu-group-1018 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -761,7 +830,7 @@
     width: 100%;
     max-width: 40.625rem;
     margin: 0;
-    color: var(--bodyTextColor);
+    color: var(--brownMedium);
   }
   #cs-menu-group-1018 .cs-menu-list {
     width: 100%;
@@ -808,7 +877,7 @@
     content: "";
     width: 50%;
     height: 1px;
-    background: #b4b2c7;
+    background: var(--secondary);
     opacity: 1;
     position: relative;
     display: block;
@@ -834,8 +903,8 @@
     margin: 0;
     padding: 0.5rem 0.75rem;
     border-radius: 5rem;
-    background-color: #fff;
-    border: 1px solid #b4b2c7;
+    background-color: var(--bodyTextColorWhite);
+    border: 1px solid var(--secondary);
     color: var(--primary);
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
@@ -852,7 +921,7 @@
     text-align: inherit;
     width: 100%;
     margin: 0;
-    color: var(--bodyTextColor);
+    color: var(--brownMedium);
   }
 }
 /* Tablet - 768px */
@@ -963,7 +1032,7 @@
     #cs-navigation .cs-li-link.cs-drop-link {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 2vw, 1.25rem);
-        color: #fff;
+        color: var(--bodyTextColorWhite);
     }
 }
 
@@ -993,7 +1062,7 @@
         min-width: 12.5rem;
         margin: 0;
         padding: 0;
-        background-color: #1a1a1a;
+        background-color: var(--headerColor);
         overflow: hidden;
         opacity: 0;
         visibility: hidden;
@@ -1093,7 +1162,7 @@
         padding: 0 1rem;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
-        background: rgba(26, 26, 26, 0.08);
+        background: var(--secondaryAlpha08);
         -webkit-backdrop-filter: blur(27px);
         backdrop-filter: blur(27px);
         position: fixed;
@@ -1104,7 +1173,7 @@
         content: "";
         width: 100%;
         height: 0%;
-        background: #1a1a1a;
+        background: var(--headerColor);
         opacity: 1;
         position: absolute;
         display: block;
@@ -1214,7 +1283,7 @@
         font-weight: 700;
         text-align: center;
         margin: 0;
-        color: #fff;
+        color: var(--bodyTextColorWhite);
         min-width: 9.375rem;
         padding: 0 2rem;
         background-color: transparent;
@@ -1268,7 +1337,7 @@
         background-color: var(--cream);
         background-image:
             linear-gradient(90deg, var(--primary) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(210, 112, 90, 0.1) 2px, transparent 2px);
+            linear-gradient(90deg, var(--primaryAlpha10) 2px, transparent 2px);
         background-size: 60px 100%, 20px 100%;
         background-position: right 10%, right 5%;
         background-repeat: repeat-y;
@@ -1321,7 +1390,7 @@
         max-width: 32.375rem;
         /* 24px - 48px */
         margin: 0 0 clamp(1.5rem, 3vw, 3rem) 0;
-        color: var(--bodyTextColor);
+        color: var(--brownMedium);
     }
     #hero-998 .cs-button-solid {
         font-size: 1rem;
@@ -1331,7 +1400,7 @@
         font-weight: 700;
         text-align: center;
         margin: auto;
-        color: #fff;
+        color: var(--bodyTextColorWhite);
         min-width: 9.375rem;
         padding: 0 2rem;
         background-color: var(--primary);
@@ -1342,14 +1411,14 @@
         /* prevents padding from adding to the width */
         box-sizing: border-box;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 15px var(--blackAlpha10);
     }
     #hero-998 .cs-button-solid:before {
         content: "";
         position: absolute;
         height: 100%;
         width: 0%;
-        background: #fff;
+        background: var(--bodyTextColorWhite);
         opacity: 1;
         top: 0;
         left: 0;
@@ -1358,8 +1427,8 @@
     }
     #hero-998 .cs-button-solid:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        color: #fff;
+        box-shadow: 0 6px 20px var(--blackAlpha15);
+        color: var(--bodyTextColorWhite);
     }
     #hero-998 .cs-button-solid:hover:before {
         width: 100%;

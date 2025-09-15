@@ -9,10 +9,10 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(253, 253, 252, 0.97);
+    background: var(--whiteAlpha97);
     backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--whiteAlpha03);
+    box-shadow: 0 2px 20px var(--blackAlpha05);
     transition: var(--transition);
 }
 
@@ -72,7 +72,7 @@
 
 .nav-cta {
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 12px 24px;
     border-radius: var(--radius-sm);
     text-decoration: none;
@@ -100,7 +100,7 @@
 .hamburger-line {
     width: 24px;
     height: 2px;
-    background: var(--text-primary);
+    background: var(--accent);
     transition: var(--transition);
 }
 
@@ -111,7 +111,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--blackAlpha50);
     backdrop-filter: blur(10px);
     z-index: 999;
 }
@@ -131,13 +131,13 @@
     color: var(--text-primary);
     text-decoration: none;
     padding: var(--space-sm) 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--blackAlpha10);
     transition: var(--transition);
 }
 
 .mobile-nav-cta {
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     text-align: center;
     padding: var(--space-sm);
     border-radius: var(--radius-sm);
@@ -148,7 +148,7 @@
 /* Button Components */
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primaryLight));
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 18px 36px;
     border-radius: 30px;
     text-decoration: none;
@@ -157,14 +157,14 @@
     align-items: center;
     gap: var(--space-xs);
     transition: var(--transition);
-    box-shadow: 0 6px 20px rgba(112, 210, 90, 0.3);
+    box-shadow: 0 6px 20px var(--greenAlpha30);
     letter-spacing: 0.5px;
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--primaryLight), var(--primary));
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(112, 210, 90, 0.4);
+    box-shadow: 0 8px 25px var(--greenAlpha40);
 }
 
 .btn-secondary {
@@ -177,14 +177,14 @@
     font-weight: 500;
     transition: var(--transition);
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(112, 210, 90, 0.15);
+    box-shadow: 0 4px 15px var(--greenAlpha15);
 }
 
 .btn-secondary:hover {
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(112, 210, 90, 0.3);
+    box-shadow: 0 6px 20px var(--greenAlpha30);
 }
 
 /* Utility Classes */
@@ -197,7 +197,7 @@
 .section-label {
     display: inline-block;
     background: var(--primary);
-    color: white;
+    color: var(--bodyTextColorWhite);
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.875rem;
