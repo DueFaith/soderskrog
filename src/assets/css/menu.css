@@ -126,10 +126,10 @@
     }
 
     #cs-menu-group-1038 .cs-button.cs-active {
-        color: var(--accent);
-        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: var(--primary) !important;
+        background: var(--legacyMenuAlpha10) !important;
         font-weight: 600;
-        box-shadow: 0 4px 15px var(--legacyMenuAlpha30);
+        box-shadow: none !important;
     }
 
     #cs-menu-group-1038 .cs-menu {
@@ -162,10 +162,10 @@
         margin: 0;
         width: 100%;
         padding: var(--space-lg);
-        background: var(--surface);
+        background: var(--brownMediumDark) !important;
         border-radius: var(--radius-lg);
         box-shadow: 0 4px 15px var(--blackAlpha05);
-        border: 1px solid var(--legacyMenuAlpha10);
+        border: 1px solid var(--brownMedium) !important;
         display: flex;
         flex-direction: column;
         gap: var(--space-sm);
