@@ -208,7 +208,9 @@
         max-width: 20ch;
         display: block;
         flex: none;
-        color: var(--text-primary);
+        color: var(--bodyTextColorWhite);
+        text-shadow: 2px 2px 4px var(--brownDarkAlpha60);
+        font-weight: 600;
     }
 
     #cs-menu-group-1038 .cs-price {
@@ -225,7 +227,7 @@
         display: block;
         flex: none;
         order: 3;
-        box-shadow: 0 2px 8px var(--legacyMenuAlpha30);
+        box-shadow: 0 4px 12px var(--brownDarkAlpha60), 0 2px 4px var(--blackAlpha20);
     }
 
     #cs-menu-group-1038 .cs-menu-p {
